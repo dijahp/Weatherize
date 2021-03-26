@@ -1,0 +1,114 @@
+/*The main weather module container */
+.weatherContainer{
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 50px;
+    height: 600px;
+    font-family: 'Raleway', sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+/* Inside weather container */
+.Header{
+    color: #fff
+}
+.Header h1{
+    font-size: 2.5rem;
+    letter-spacing: 6px;
+}
+.Header h4{
+    font-size: 14px;
+}
+
+.MainWeather{
+    color: #fff;
+}
+
+/* Bottom of weather container */
+.BottomWeather{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin: 0 20px;
+    color: #fff
+}
+
+/* Individual Weather Block */
+.WeatherBlock{
+    border: 1px solid black;
+    height: 100px;
+}
+
+/*Weather backgrounds */
+.weather-2{
+    background-image: url('../images/thunderstorm.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+.weather-3{
+    background-image: url('../images/drizzle.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+.weather-5{
+    background-image: url('../images/rain.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+.weather-6{
+    background-image: url('../images/snow.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+.weather-7{
+    background-image: url('../images/atmosphere.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+.weather-8{
+    background-image: url('../images/cloudy.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+.weather-800{
+    background-image: url('../images/clear.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+/* Weather Container Gradient */
+
+.weatherGradient-800{
+    background: rgb(7,59,132);
+    background: linear-gradient(176deg, rgba(7,59,132,1) 0%, rgba(126,173,220,1) 92%);
+}
+.weatherGradient-8{
+    background: rgb(35,45,45);
+    background: linear-gradient(176deg, rgba(35,45,45,1) 0%, rgba(122,129,138,1) 92%);
+}
+.weatherGradient-7{
+    background: rgb(83,96,128);
+    background: linear-gradient(175deg, rgba(83,96,128,1) 0%, rgba(146,167,211,1) 98%, rgba(211,216,239,1) 100%);
+}
+.weatherGradient-6{
+    background: rgb(87,139,165);
+    background: linear-gradient(175deg, rgba(87,139,165,1) 0%, rgba(132,180,213,1) 67%, rgba(183,222,234,1) 100%);
+}
+.weatherGradient-5{
+    background: rgb(41,40,40);
+    background: linear-gradient(176deg, rgba(41,40,40,1) 41%, rgba(204,117,70,1) 98%);
+}
+.weatherGradient-3{
+    background: rgb(29,61,16);
+    background: linear-gradient(175deg, rgba(29,61,16,1) 41%, rgba(186,219,144,1) 98%);
+}
+.weatherGradient-2{
+    background: rgb(27,25,46);
+    background: linear-gradient(175deg, rgba(27,25,46,1) 41%, rgba(91,105,180,1) 98%);
+}
