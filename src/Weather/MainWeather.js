@@ -3,11 +3,10 @@ import React from 'react'
 const MainWeather = ({currentWeather}) => {
  const icon = currentWeather.weather[0].icon;
  const weatherTitle = currentWeather.weather[0].main;
- let weatherDesc = currentWeather.weather[0].description;
- weatherDesc = weatherDesc.charAt(0).toUpperCase() + weatherDesc.slice(1)
- const currentTemp = currentWeather.main.temp;
- const tempHigh = currentWeather.main.temp_max;
- const tempLow = currentWeather.main.temp_min;  
+ 
+ const currentTemp = Math.ceil(currentWeather.main.temp);
+ const tempHigh = Math.ceil(currentWeather.main.temp_max);
+ const tempLow = Math.ceil(currentWeather.main.temp_min);  
  console.log(icon)
 
     return (
@@ -17,18 +16,17 @@ const MainWeather = ({currentWeather}) => {
                 <h1 className="weatherTitle">
                    {weatherTitle}
                 </h1>
-                <h4>{weatherDesc}</h4>
             </div>
             <div className="weatherdegrees">
                 <div className="currentTemp">
-                    {currentTemp}
+                    {`${currentTemp}°`}
                 </div>
                 <div className="currentHighandLow">
                     <div className="currentHigh">
-                        {tempHigh}
+                        {`${tempHigh}° F`}
                     </div>
                     <div className="currentLow">
-                        {tempLow}
+                        {`${tempLow}° F`}
                     </div>
                 </div>
             </div>
