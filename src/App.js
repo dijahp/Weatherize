@@ -20,7 +20,7 @@ const App = () => {
   useEffect(() => {
     if(city && stateName){
 
-      axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city},${stateName}&appid=8e9a4b4545a680355a95d6c810a6f708&units=imperial`).then((res) => {
+      axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city},${stateName}&appid=${process.env.REACT_APP_API_TOKEN}&units=imperial`).then((res) => {
         console.log(res.data)
         setCurrentWeather(res.data)
         setWeatherCode(res.data.weather[0].id === 800 ? 800 : res.data.weather[0].id.toString().charAt(0) )
