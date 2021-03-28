@@ -8,9 +8,22 @@
 .App {
     height:100vh;
 }
+.weatherBackground{
+    background-image: url(../images/pexels-leon-macapagal-6622896.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
 
+#WeatherSearch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
 .WeatherSearch-container{
-    width: 20%;
+    width: 360px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -19,6 +32,7 @@
 .WeatherSearch-container label{
     font-family: 'Raleway', sans-serif;
     font-size: 2rem;
+    z-index: 3;
 }
 .searchInput{
     font-size: 14px;
@@ -30,6 +44,8 @@
     height:25px;
     width: 60% - 10px;
     border: 1.5px solid;
+    z-index: 4;
+    position: relative
 }
 
 .searchBarBtn button{
@@ -40,4 +56,23 @@
     width: 70px;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
+    z-index: 4;
+    position: relative
+}
+
+.slide-top {
+
+   height: auto !important; 
+}
+
+.container-round{
+    border-color: rgba(39, 38, 38, 0.9);
+    border-width: 5px;
+    border-style: solid;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    z-index: 2;
 }
