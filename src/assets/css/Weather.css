@@ -162,3 +162,42 @@ width: 60px;
     background: rgb(27,25,46);
     background: linear-gradient(175deg, rgba(27,25,46,1) 41%, rgba(91,105,180,1) 98%);
 }
+@media all and (max-width: 480px) {
+    .weatherContainer{
+        width: 300px;
+        height: 440px;
+    }
+    .weathername h1{
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        margin-left: -5px;
+        font-size: 2rem;
+    }
+    .currentTemp{
+        font-size: 5rem;
+        margin-left: 50px;
+    }
+    .Header{
+        color: #fff;
+        text-align: center;
+        margin-bottom: 10px;
+        padding-top: 10px;
+    }
+    /* Individual Weather Block */
+.WeatherBlock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.WeatherBlock h3{
+    font-size: 12px;
+    margin: 10px 0 5px 0;
+}
+.WeatherBlock i {
+    display: none;
+}
+ }

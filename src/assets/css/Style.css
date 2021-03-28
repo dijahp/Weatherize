@@ -76,3 +76,14 @@
     position: absolute;
     z-index: 2;
 }
+
+@media all and (max-width: 500px) { 
+  
+.container-round{
+    width: 300px;
+    height: 300px;
+}  
+.WeatherSearch-container{
+    width: 300px;
+}
+}
