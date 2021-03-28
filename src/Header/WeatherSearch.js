@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import states from 'us-state-converter';
 
-const WeatherSearch = ({location, setLocation, city, setCity, stateName, setStateName, errorMsg, setErrormsg}) => {
+const WeatherSearch = ({location, setLocation, city, setCity, stateName, setStateName, errorMsg, setErrormsg, enableSlide}) => {
 
 
 const handleLocationChange = (e) => {
@@ -26,7 +26,8 @@ const submitWeatherSearch = (e) => {
    }
 }
     return(
-        <div id="WeatherSearch">
+        <div id="WeatherSearch" className={enableSlide ? "slide-top" : null}>
+            {enableSlide ? null :  <div className="container-round"></div> }
             <form onSubmit={submitWeatherSearch}>
                 <div className="WeatherSearch-container">
                 <label className="searchLocation">

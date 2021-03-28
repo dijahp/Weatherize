@@ -1,4 +1,3 @@
-import './App.css';
 import WeatherSearch from './Header/WeatherSearch'
 import Header from './Header/Header'
 import React, {useState, useEffect} from 'react';
@@ -16,6 +15,7 @@ const App = () => {
   const [errorMsg, setErrormsg] = useState()
   const [currentWeather, setCurrentWeather] = useState()
   const [weatherCode, setWeatherCode] = useState()
+  const [enableSlide, setEnableSlide] = useState(false)
   
   useEffect(() => {
     if(city && stateName){
@@ -24,11 +24,12 @@ const App = () => {
         console.log(res.data)
         setCurrentWeather(res.data)
         setWeatherCode(res.data.weather[0].id === 800 ? 800 : res.data.weather[0].id.toString().charAt(0) )
+        setEnableSlide(true)
       })
     }
   },[city, stateName])
   return (
-    <div className={`App weather-${weatherCode}`}>
+    <div className={enableSlide ? `App weather-${weatherCode}` : `App weather-${weatherCode} weatherBackground`}>
      <WeatherSearch
       location={location}
       setLocation={setLocation}
@@ -38,6 +39,7 @@ const App = () => {
       setStateName={setStateName}
       errorMsg={errorMsg}
       setErrormsg={setErrormsg}
+      enableSlide={enableSlide}
      />
      {currentWeather ? 
       <div className={`weatherContainer weatherGradient-${weatherCode}`}>
